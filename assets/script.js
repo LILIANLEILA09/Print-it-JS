@@ -19,7 +19,7 @@
 	},
 ]
 //ETAPE 1:METTRE A JOUR LE CODE HTML
-let bannerImg = document.querySelector('.banner-img');
+let bannerImg = document.getElementById('.banner-img');
 let  arrowLeft = document.querySelector('.arrow_left');
 let arrowRight = document.querySelector('.arrow_right');
 let dots = document.querySelectorAll('.dot'); // Sélectionnez tous les points
@@ -28,14 +28,12 @@ let currentIndex = 0
 
 //ETAPE 2:AJOUTER UN ADDEVENTLISTENER SUR LES FLECHES
 //event listener sur la flèche de gauche. 
-// Gestionnaire d'événement pour le clic sur la flèche gauche
     arrowLeft.addEventListener('click',()=> {
     currentIndex = (currentIndex - 1);
     updateCarousel(currentIndex, 'left')
     updateDots(currentIndex); // Mettez à jour les points indicateurs
 });
 //event listener sur la flèche de droite. 
-// Gestionnaire d'événement pour le clic sur la flèche droite
 arrowRight.addEventListener('click',()=> {
     currentIndex = (currentIndex + 1) 
     updateCarousel(currentIndex, 'right')
@@ -74,20 +72,14 @@ function updateCarousel(index, direction) {
     let tagLine = slides[currentIndex].tagLine
 	  // Mettre à jour le texte 	//intégrer le texte avec innerHTML 
     document.querySelector('p').innerHTML = tagLine
-
     console.log(`Clic sur la flèche ${direction}`)
 }
-
 
 // Afficher la première diapositive au chargement de la page
 updateCarousel(currentIndex, 'démarrage')
 updateDots(currentIndex) // Mettez à jour les points indicateurs pour la première diapositive
 
 
-
-
-
-   
     
 	
 
