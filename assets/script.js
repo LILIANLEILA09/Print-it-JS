@@ -71,8 +71,8 @@ function updateCarousel(index, direction) {
   // insérez la tagLine de la slide.
     let tagLine = slides[currentIndex].tagLine
 	  // Mettre à jour le texte 	//intégrer le texte avec innerHTML 
-    document.querySelector('p').innerHTML = tagLine
-    console.log(`Clic sur la flèche ${direction}`)
+      document.querySelector('p').innerHTML = tagLine
+      console.log(`Clic sur la flèche ${direction}`)
 }
 
 // Afficher la première diapositive au chargement de la page
